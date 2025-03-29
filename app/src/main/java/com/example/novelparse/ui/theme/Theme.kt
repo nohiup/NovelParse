@@ -25,7 +25,6 @@ private val LightColorScheme = lightColorScheme(
     primary = Purple40,
     secondary = PurpleGrey40,
     tertiary = Pink40
-
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),
@@ -35,6 +34,18 @@ private val LightColorScheme = lightColorScheme(
     onBackground = Color(0xFF1C1B1F),
     onSurface = Color(0xFF1C1B1F),
     */
+)
+
+
+private val SepiaColorScheme = lightColorScheme(
+    primary = SepiaPrimary,
+    secondary = SepiaDark,
+    background = SepiaBackground,
+    surface = SepiaLight,
+    onPrimary = White,
+    onSecondary = White,
+    onBackground = SepiaDark,
+    onSurface = SepiaPrimary
 )
 
 @Composable
@@ -63,8 +74,10 @@ fun NovelParseTheme(
     }
 
     MaterialTheme(
-        colorScheme = colorScheme,
+        colorScheme = SepiaColorScheme,
         typography = Typography,
         content = content
     )
+
+
 }
