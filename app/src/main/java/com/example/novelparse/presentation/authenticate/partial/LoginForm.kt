@@ -54,7 +54,14 @@ fun LoginForm(authViewModel: AuthViewModel, navController: NavController){
         Spacer(modifier = Modifier.height(16.dp))
 
         Button(
-            onClick = {authViewModel.login()}
+            onClick = {
+                authViewModel.login()
+                navController.navigate("home"){
+                    popUpTo("auth"){
+                        inclusive = true
+                    }
+                }
+            }
         ) {
             Text("Login")
         }
